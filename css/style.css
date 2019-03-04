@@ -3,8 +3,12 @@
 
 .top-header {
     align-items: center;
-    padding: 5px 0;
+    padding: 8px 0;
     background: #0e1b33;
+}
+
+.top-header-grid {
+    display: grid;
 }
 
 .container-header {
@@ -15,7 +19,7 @@
 .top-socials a {
     font-size: 14px;
     color: #ffffff;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .top-terms a {
@@ -23,6 +27,7 @@
     font-weight: 600;
     font-size: 14px;
     color: #ffffff;
+    margin-right: 20px;
 }
 
 .top-email a {
@@ -37,13 +42,29 @@
     text-decoration: none;
 }
 
-.top-socials, .top-terms, .top-email {
-    display: inline;
+.top-socials {
+    grid-row: 1;
+    grid-column: 1;
 }
+
+.top-terms {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.top-email {
+    grid-row: 1;
+    grid-column: 12;
+}
+
 
 /* Header NAV */
 
 header {
+
+}
+
+.navheader {
     align-items: center;
     justify-content: center;
 }
