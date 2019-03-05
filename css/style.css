@@ -148,7 +148,8 @@ header {
     line-height: 50px;
     text-decoration: none; 
     border-bottom: solid 2px #ececec;
-    color: #ff8155;
+    color: #e24f1a;
+
     transition: .2s;
 }
 
@@ -176,7 +177,7 @@ header {
     height: 400px;
     text-align: center;
     align-items: center;
-    z-index: -1;
+    z-index: 1;
 }
 
 .product-store::after {  
@@ -222,7 +223,7 @@ header {
 
 .text-container a:hover {
     text-decoration: none;
-    color: #a9b2c0;
+    color: #ff8155;
     transition: .2s;
 }
 
@@ -446,7 +447,7 @@ footer {
     padding-top: 100px;
     padding-bottom: 40px;
     position: relative;
-    z-index: -1;
+    z-index: 1; 
 }
 
 footer::after {
@@ -455,7 +456,7 @@ footer::after {
     height: 100%;
     opacity: .20;
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     top: 0;
     left: 0;
     background-image: url("../images/dots.png");
