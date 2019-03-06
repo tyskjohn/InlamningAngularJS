@@ -9,7 +9,7 @@
 
 .top-header-grid {
     display: grid;
-    grid-template-columns: 1fr auto auto 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr auto;
 }
 
 .container-header {
@@ -39,7 +39,7 @@
 }
 
 .top-terms a:hover, .top-socials a:hover, .top-email a:hover {
-    color: #ff8155;
+    color: #ffcab7;
     text-decoration: none;
 }
 
@@ -50,7 +50,7 @@
 
 .top-terms {
     grid-row: 1;
-    grid-column: 3;
+    grid-column: 2;
 }
 
 .top-email {
@@ -96,7 +96,7 @@ header {
 }
 
 .logotype:hover {
-    color: #a9b2c0;
+    color: #0e1b33;
     text-decoration: none;
 }
 
@@ -313,6 +313,11 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.grid-circle:hover, .list-circle:hover {
+    background-color: #ffd9cb;
+    cursor: pointer;
 }
 
 .show-results {
