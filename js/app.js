@@ -3,9 +3,15 @@ let app = angular.module("cardApp", []);
 app.controller("cardController", function($scope) {
 
     let itemList = [
-        { image: "https://images.pexels.com/photos/100655/pexels-photo-100655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", productname: "BMW 530", price: "300000", rating: "" }
+        { image: "/images/annonsbyrå.jpg" , productname: "Chiffonjé", price: "1500", rating: "" },
+        { image: "/images/annonsbyrå2.jpg" , productname: "Byrå", price: "1000", rating: "" },
+        { image: "/images/fjäderlampa.jpg" , productname: "Fjäderlampa", price: "600", rating: "" },
+        { image: "/images/annonsnattucksbord.jpg" , productname: "Nattduksbord", price: "500", rating: "" },
+        { image: "/images/annonsgrönbyrå.jpg" , productname: "Byrå rund", price: "1400", rating: "" },
+        { image: "/images/anonsnattucksbord2.jpg" , productname: "Nattduksbord pas", price: "1200", rating: "" }
     ];
 
     $scope.itemList = itemList;
+    $scope.sortItem = "";
 
 });

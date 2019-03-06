@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <script src="js/app.js"></script>
 
 </head>
@@ -88,7 +89,7 @@
 
     </div>
 
-    <main class="container" data-ng-app="cardApp">
+    <main class="container" data-ng-app="cardApp" data-ng-controller="cardController">
 
         <div class="slogan-section">
             <div class="slogan-card">
@@ -129,36 +130,24 @@
 
             <span class="show-results">Showing 1-12 of 30 results</span>
 
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Sort by
-            </button>
+            <select class="btn" data-ng-model="sortItem">
+                <option value="">Sort by</option>
+                <option value="price">Price</option>
+                <option value="rating">Rating</option>
+                <option value="productname">Product Name</option>
+            </select>
 
             <input class="form-control" type="search" placeholder="Search from here...">
         </div>
 
-        <div class="card-section" data-ng-controller="cardController">
+        <div class="card-section" >
 
-            <div class="card" data-ng-repeat="card in itemList">
-                <div class="card-item">{{ card.image }}</div>
-                <h3 class="card-title">Helix Stereo Colorful T-shirt</h3>
-                <span class="card-price">$500</span>
-                <span class="card-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-            </div>
-
-            <div class="card">
-                <div class="card-item"></div>
-                <h3 class="card-title">Helix Stereo Colorful T-shirt</h3>
-                <span class="card-price">$500</span>
-                <span class="card-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-            </div>
-
-            <div class="card">
-                <div class="card-item"></div>
-                <h3 class="card-title">Helix Stereo Colorful T-shirt</h3>
-                <span class="card-price">$500</span>
+            <div class="card" data-ng-repeat="card in itemList | orderBy:sortItem">
+                <div class="card-item">
+                    <img class="" src="{{ card.image }}" alt="">
+                </div>
+                <h3 class="card-title">{{ card.productname }}</h3>
+                <span class="card-price">{{ card.price }} kr</span>
                 <span class="card-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
             </div>
@@ -284,7 +273,7 @@
     </footer>
 
 
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
