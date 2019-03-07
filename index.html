@@ -128,21 +128,27 @@
                 </div>
             </div>
 
-            <span class="show-results">Showing 1-12 of 30 results</span>
+            <!-- <span class="show-results">Showing 1-12 of 30 results</span> -->
 
-            <select class="btn" data-ng-model="sortItem">
+            <select class="btn show-products" data-ng-model="showProducts">
+                <option value="2">Showing 1-2 of 6 results</option>
+                <option value="4">Showing 1-4 of 6 results</option>
+                <option value="6">Showing 1-6 of 6 results</option>
+            </select>
+
+            <select class="btn sort-category" data-ng-model="sortItem">
                 <option value="">Sort by</option>
                 <option value="price">Price</option>
                 <option value="rating">Rating</option>
                 <option value="productname">Product Name</option>
             </select>
 
-            <input class="form-control" type="search" placeholder="Search from here...">
+            <input data-ng-model="searchText" class="form-control" type="search" placeholder="Search from here...">
         </div>
 
-        <div class="card-section" >
+        <div class="card-section">
 
-            <div class="card" data-ng-repeat="card in itemList | orderBy:sortItem">
+            <div class="card" data-ng-repeat="card in itemList | limitTo:showProducts | orderBy:sortItem | filter:search">
                 <div class="card-item">
                     <img class="" src="{{ card.image }}" alt="">
                 </div>

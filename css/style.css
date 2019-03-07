@@ -320,20 +320,27 @@ header {
     cursor: pointer;
 }
 
-.show-results {
-    grid-row: 1;
-    grid-column: 10;
+.main-nav select {
     font-family: 'rubik', sans-serif;
     color: #788892;
     font-size: 16px;
 }
 
-.main-nav select {
+.show-products {
     grid-row: 1;
-    grid-column: 11;
+    grid-column: 10;
+}
+
+/* .show-results {
+    
     font-family: 'rubik', sans-serif;
     color: #788892;
     font-size: 16px;
+} */
+
+.sort-category {
+    grid-row: 1;
+    grid-column: 11;
 }
 
 .main-nav input {
