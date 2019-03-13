@@ -205,6 +205,16 @@ header {
     background-image: url("../images/pohat-background.jpeg");
 }
 
+.product-store img {
+    opacity: .3; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    object-fit: cover;
+    height: 100%;
+}
+
 .text-container {
     position: absolute;
     top: 50%;
@@ -488,6 +498,7 @@ footer::after {
     z-index: -1;
     top: 0;
     left: 0;
+    
     background-image: url("../images/dots.png");
 }
 
@@ -539,10 +550,13 @@ footer::after {
     transform: translate(-50%, -50%);
 }
 
-.circle-socials:hover, .circle-socials a:hover {
+.circle-socials:hover, .circle-socials:hover a {
     background: #ff8155;
     color: #FFF;
+
+    transition: ease-in-out .1s;
 }
+
 
 .more-links {
     grid-column: 2;

@@ -1,4 +1,4 @@
-let app = angular.module("cardApp", []);
+let app = angular.module("cardApp", ["ngRoute"]);
 
 app.controller("cardController", function ($scope) {
 
