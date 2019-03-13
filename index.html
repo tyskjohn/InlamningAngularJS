@@ -18,6 +18,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-route.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+
 
 </head>
 
@@ -121,12 +124,17 @@
         <div class="main-nav">
             <div class="grid-or-list">
 
-                <div class="grid-circle">
-                    <span><i class="fas fa-th"></i></span>
-                </div>
-                <div class="list-circle">
-                    <span><i class="fas fa-bars"></i></span>
-                </div>
+                <a href="#/!">
+                    <div class="grid-circle">
+                        <span><i class="fas fa-th"></i></span>
+                    </div>
+                </a>
+                <a href="#!showlist">
+                    <div class="list-circle">
+                        <span><i class="fas fa-bars"></i></span>
+                    </div>
+                </a>
+
             </div>
 
             <select class="btn show-products" data-ng-model="showProducts">
@@ -146,19 +154,8 @@
         </div>
 
         <!-- AngularJS View -->
-        <div class="card-section">
-
-            <div class="card"
-                data-ng-repeat="card in itemList | limitTo:showProducts | orderBy:sortItem | filter:search">
-                <div class="card-item">
-                    <img class="" src="{{ card.image }}" alt="">
-                </div>
-                <h3 class="card-title">{{ card.productname }}</h3>
-                <span class="card-price">{{ card.price }} kr</span>
-                <span class="card-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-            </div>
-
+        <div data-ng-view>
+            
         </div>
 
         <div class="choosepage-section">

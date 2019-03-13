@@ -305,16 +305,20 @@ header {
     margin-top: 80px;
 }
 
-.grid-or-list {
+.grid-or-list a {
     grid-row: 1;
+}
+
+.grid-or-list {
+    
     display: grid;
 }
 
 .grid-circle {
     grid-row: 1;
     position: relative;
-    color: #788892;
-    background: #ececec;
+    color: #fff;
+    background: #ff8155;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -323,8 +327,9 @@ header {
 .list-circle {
     grid-row: 1;
     position: relative;
-    color: #fff;
-    background: #ff8155;
+    color: #788892;
+    background: #ececec;
+    
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -372,7 +377,7 @@ header {
     border-radius: 30px;
 }
 
-/* main Card section */
+/* main Grid-Card section */
 
 .card-section {
     display: grid;
@@ -401,7 +406,6 @@ header {
 
 .card-item img {
     border-radius: 3px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     height: 400px;
     max-width: 340px;
 }
@@ -430,6 +434,68 @@ header {
     font-size: 16px;
     color: #ffba00;
 }
+
+/* main list-Card section */
+
+.list-card-section {
+    display: grid;
+    grid-gap: 20px 0;
+    margin-top: 20px;
+}
+
+.list-card {
+    display: grid;
+    grid-gap: 0px 10px;
+    padding: 10px 0;
+    border-top: solid 1px #ececec;
+}
+
+.list-card-item {
+    grid-column: 1;
+    grid-row: 1 / 12;
+}
+
+.list-card img {
+    max-height: 150px;
+    max-width: 150px;
+
+    border-radius: 3px; 
+}
+
+.list-card-title {
+    grid-column: 2;
+    grid-row: 1;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #0e1b33;
+}
+
+.list-card-description  {
+    grid-column: 2;
+    grid-row: 11;
+
+    max-width: 400px;
+}
+
+.list-card-price {
+    grid-column: 12;
+    grid-row: 1;
+
+    font-size: 16px;
+    font-weight: normal;
+    color: #ff8155;
+}
+
+.list-card-rating {
+    grid-column: 12;
+    grid-row: 11;
+
+    font-size: 16px;
+    color: #ffba00;
+}
+
+
 
 
 /* Page selection */
