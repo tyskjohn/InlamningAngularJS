@@ -11,13 +11,11 @@ app.controller("cardController", function ($scope) {
         { image: "/images/anonsnattucksbord2.jpg", productname: "Nattduksbord pas", price: 1200, rating: "" }
     ];
 
-    // $scope.showProducts =  
+     
     $scope.showProducts = "6";
     $scope.itemList = itemList;
     $scope.sortItem = "";
 
-    // show * articles click-function
-    
 
     // filter search
     $scope.search = function(item) {

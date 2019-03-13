@@ -76,8 +76,9 @@
     </header>
 
     <div class="product-store">
+        <img style="opacity: .3; position: absolute; top: 0; left: 0; " src="/images/dots.png" alt="">
 
-        <div class="text-container" background="/images/dots.png">
+        <div class="text-container">
             <h5>DIGITAL MARKETING</h5>
             <h1>Product Store</h1>
             <div>
@@ -148,7 +149,8 @@
 
         <div class="card-section">
 
-            <div class="card" data-ng-repeat="card in itemList | limitTo:showProducts | orderBy:sortItem | filter:search">
+            <div class="card"
+                data-ng-repeat="card in itemList | limitTo:showProducts | orderBy:sortItem | filter:search">
                 <div class="card-item">
                     <img class="" src="{{ card.image }}" alt="">
                 </div>
