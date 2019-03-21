@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
 
-route.get('/', (req,res,next) => {
+route.get("/", (req,res,next) => {
     res.status(200).json([
         { image: "/images/annonsbyrå.jpg", productname: "Chiffonjé", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laborum reprehenderit qui quo aspernatur ab.", price: 1500, rating: "" },
         { image: "/images/annonsbyrå2.jpg", productname: "Byrå", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laborum reprehenderit qui quo aspernatur ab.", price: 1000, rating: "" },

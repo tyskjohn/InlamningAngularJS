@@ -7,7 +7,7 @@ app.use(function(req,res,next) {
     next();
 });
 
-const productRoutes = require('/routes/products.js');
-app.use('/api/products', productRoutes);
+const productRoutes = require('./routes/itemList.js');
+app.use('/api/itemList', productRoutes);
 
 module.exports = app;
