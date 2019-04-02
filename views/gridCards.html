@@ -6,8 +6,9 @@
         </div>
         <h3 class="card-title">{{ card.productname }}</h3>
         <span class="card-price">{{ card.price }} kr</span>
-        <span class="card-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        <div class="card-rating">
+            <div class="card-rating-stars" data-ng-style="{ 'width': rating(card.rating) }"></div>
+        </div>
 
     </div>
 </div>

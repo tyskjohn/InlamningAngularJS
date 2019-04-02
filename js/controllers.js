@@ -1,5 +1,6 @@
 app.controller("cardController", function ($scope, $http) {
 
+    // hämtar json-listan från API
     $http.get("http://localhost:5000/api/itemList")
     .then(function(res) {
         $scope.itemList = res.data;
@@ -22,4 +23,15 @@ app.controller("cardController", function ($scope, $http) {
         }
         return false;
     };
+
+    // RatingCalculator
+    const starsTotal = 5;
+
+    $scope.rating = function(input) {
+        const starProcentage = (input / starsTotal) * 100;
+        const starProcentageRounded = `${Math.round(starProcentage /10) * 10}%`;
+
+        return starProcentageRounded;
+    }
+
 });

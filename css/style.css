@@ -432,7 +432,31 @@ header {
     grid-column: 3;
 
     font-size: 16px;
-    color: #ffba00;
+    position: relative;
+    display: inline-block;
+}
+
+.card-rating::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    color: #ccc;
+    font-weight: 900;
+}
+
+.card-rating-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.card-rating-stars::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    color: #f8ce0b;
+    font-weight: 900;
 }
 
 /* main list-Card section */
@@ -492,7 +516,31 @@ header {
     grid-row: 11;
 
     font-size: 16px;
-    color: #ffba00;
+    position: relative;
+    display: inline-block;
+}
+
+.list-card-rating::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    color: #ccc;
+    font-weight: 900;
+}
+
+.list-card-rating-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.list-card-rating-stars::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    color: #f8ce0b;
+    font-weight: 900;
 }
 
 

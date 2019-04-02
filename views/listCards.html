@@ -6,7 +6,8 @@
         <h3 class="list-card-title">{{ card.productname }}</h3>
         <p class="list-card-description">{{ card.description }}</p>
         <span class="list-card-price">{{ card.price }} kr</span>
-        <span class="list-card-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        <div class="list-card-rating">
+            <div class="list-card-rating-stars" data-ng-style="{ 'width': rating(card.rating) }"></div>
+        </div>
     </div>
 </div>
