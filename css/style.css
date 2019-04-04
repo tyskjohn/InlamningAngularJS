@@ -122,7 +122,7 @@ header {
     cursor: pointer;
 }
 
-.btn-phone:hover, .getquote-btn:hover {
+.btn-phone:hover, .login-btn:hover {
     background: #ffd9cb;
     color: #0e1b33;
     transition: .2s;
@@ -153,14 +153,14 @@ header {
     transition: .2s;
 }
 
-.getquote-btn {
+.login-btn {
     grid-row: 1;
     grid-column: 8;
 
     font-family: 'Rubik', sans-serif;
     border: none;
     background: #ff8155;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: #fff;
     padding: 17px 25px;
@@ -419,16 +419,17 @@ header {
 }
 
 .card-price {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1;
 
+    margin-top: 3px;
     font-size: 16px;
     font-weight: normal;
     color: #ff8155;
 }
 
 .card-rating {
-    grid-row: 3;
+    grid-row: 2;
     grid-column: 3;
 
     font-size: 16px;
@@ -458,6 +459,29 @@ header {
     color: #f8ce0b;
     font-weight: 900;
 }
+
+.add-to-cart {
+    grid-row: 4;
+    grid-column: 3;
+
+    margin: 0;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'rubik', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    background: #15ee90;
+    color: #FFF; 
+}
+
+.add-to-cart:hover {
+    transition: ease-in-out .1s;
+    background: #00864c;
+    color: #fff; 
+}
+
+
 
 /* main list-Card section */
 
@@ -513,7 +537,7 @@ header {
 
 .list-card-rating {
     grid-column: 12;
-    grid-row: 11;
+    grid-row: 2;
 
     font-size: 16px;
     position: relative;
@@ -543,8 +567,27 @@ header {
     font-weight: 900;
 }
 
+.list-add-to-cart {
+    grid-row: 11;
+    grid-column: 12;
 
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'rubik', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    background: #15ee90;
+    color: #FFF; 
+}
 
+.list-add-to-cart:hover {
+    transition: ease-in-out .1s;
+    background: #00864c;
+    color: #fff; 
+}
 
 /* Page selection */
 

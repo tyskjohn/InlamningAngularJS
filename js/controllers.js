@@ -33,5 +33,5 @@ app.controller("cardController", function ($scope, $http) {
 
         return starProcentageRounded;
     }
-
+    
 });
