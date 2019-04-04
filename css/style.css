@@ -58,6 +58,54 @@
     grid-column: 6;
 }
 
+/* USER HEADER */
+
+.user-header {
+    background: #eeeeee;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.greetings {
+    grid-column: 1;
+    margin-top: 14px;
+}
+
+
+.user-header button {
+    border: none;
+    background: none;
+}
+
+.mina-sidor {
+    grid-column: 2;
+}
+
+.mina-sidor:hover {
+    color: #ffcab7;
+}
+
+.shopping-cart {
+    grid-column: 6;
+}
+
+.remove-item {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666666;
+}
+
+.remove-item:hover {
+    color: red;
+}
+
+.dropdown-item:hover {
+    color: none;
+    background: none;
+}
 
 /* Header NAV */
 

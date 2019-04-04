@@ -47,6 +47,37 @@
         </div>
     </div>
 
+    <div class="top-header user-header">
+        <div class="container-header top-header-grid">
+
+            <div class="greetings">
+                <p>Hej Användare!</p>
+            </div>
+
+            <button class="mina-sidor" data-ng-click="mina-sidor">Mina Sidor</button>
+
+            <button class="shopping-cart dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <h5 class="dropdown-item">Kundvagn</h5>
+
+                <table class="table">
+                    <tr class="dropdown-item" data-ng-repeat="item in cart">
+                        <td>1 x</td>
+                        <td>Product 1</td>
+                        <td>500 kr</td>
+                        <td><button class="remove-item" data-ng-click=""><i class="fas fa-trash-alt"></i></button></td>
+                    </tr>
+                </table>
+
+                <h5 class="dropdown-item">Totalt: 500 SEK</h5>
+            </div>
+
+        </div>
+    </div>
+
     <header class="container-header">
 
         <div class="navheader">
@@ -155,7 +186,7 @@
 
         <!-- AngularJS View -->
         <div data-ng-view>
-            
+
         </div>
 
         <div class="choosepage-section">
