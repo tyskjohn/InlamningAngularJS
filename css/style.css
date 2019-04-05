@@ -91,6 +91,10 @@
     grid-column: 6;
 }
 
+.cart-thumbnail {
+    height: 50px;
+}
+
 .remove-item {
     border: none;
     background: none;

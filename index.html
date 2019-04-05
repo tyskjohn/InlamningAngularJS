@@ -27,7 +27,7 @@
 
 </head>
 
-<body data-ng-app="cardApp" >
+<body data-ng-app="cardApp" data-ng-controller="shoppingCartController">
 
     <div class="top-header">
         <div class="container-header top-header-grid">
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div class="top-header user-header" data-ng-controller="shoppingCartController">
+    <div class="top-header user-header" >
         <div class="container-header top-header-grid">
 
             <div class="greetings">
@@ -71,6 +71,7 @@
 
                 <table class="table">
                     <tr class="dropdown-item" data-ng-repeat="product in cart">
+                        <td><img class="cart-thumbnail" src="{{ product.image }}" alt=""></td>
                         <td>{{ product.quantity }} x </td>
                         <td>{{ product.productname }}</td>
                         <td>{{ getItemCost(product) }} kr</td>

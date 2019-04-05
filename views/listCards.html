@@ -1,7 +1,7 @@
 <div class="list-card-section">
     <div class="list-card" data-ng-repeat="product in itemList | limitTo:showProducts | orderBy:sortItem | filter:search">
         <div class="list-card-item">
-            <img class="" src="{{ card.image }}" alt="">
+            <img class="" src="{{ product.image }}" alt="">
         </div>
         <h3 class="list-card-title">{{ product.productname }}</h3>
         <p class="list-card-description">{{ product.description }}</p>

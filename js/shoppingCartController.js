@@ -1,9 +1,4 @@
-app.controller("shoppingCartController", function ($scope, $http) {
-
-    // $http.get("http://localhost:5000/api/itemList")
-    // .then(function(res) {
-    //     $scope.itemList = res.data;
-    // });
+app.controller("shoppingCartController", function ($scope) {
 
     // ShoppingCart
 
