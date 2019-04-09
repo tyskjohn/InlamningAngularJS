@@ -29,6 +29,10 @@ app.controller("shoppingCartController", function ($scope) {
         return product.quantity * product.price;
     };
 
+    $scope.getItemQuantity = function (product) {
+        return product.quantity;
+    };
+
     $scope.getTotalPrice = function () {
         let total = _.reduce($scope.cart, function (sum, product) {
             return sum + $scope.getItemCost(product);
@@ -39,6 +43,19 @@ app.controller("shoppingCartController", function ($scope) {
             $scope.emptycart = ""
         }
         return total;
+    };
+
+    $scope.getQuantity = function () {
+        let quantity = _.reduce($scope.cart, function (sum, product) {
+            return sum + $scope.getItemQuantity(product);
+        }, 0);
+        if(quantity === 0) {
+            $scope.badgeColor = "badge-secondary"
+        } else {
+            $scope.badgeColor = "badge-danger"
+        }
+    
+        return quantity;
     };
 
 });

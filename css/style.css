@@ -88,10 +88,20 @@
 }
 
 .shopping-cart {
+    position: relative;
     grid-column: 6;
-    font-size: 24px;
+    font-size: 26px;
+    margin-top: 8px;
 }
 
+.badge {
+    font-size: 14px; 
+    font-weight:bold; 
+    
+    position: absolute; 
+    top: 0px; 
+    left: 30px;
+}
 
 .cart-thumbnail {
     height: 50px;
