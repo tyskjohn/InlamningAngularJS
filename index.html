@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div class="top-header user-header" >
+    <div class="top-header user-header">
         <div class="container-header top-header-grid">
 
             <div class="greetings">
@@ -60,10 +60,10 @@
             <button class="mina-sidor" data-ng-click="mina-sidor">Mina Sidor</button>
 
             <!-- Shopping Cart -->
-            <button class="shopping-cart dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            <button class="shopping-cart mr-2" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-shopping-cart"></i>
-                Kundvagn
+                
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
@@ -75,7 +75,8 @@
                         <td>{{ product.quantity }} x </td>
                         <td>{{ product.productname }}</td>
                         <td>{{ getItemCost(product) }} kr</td>
-                        <td><button class="remove-item" data-ng-click="removeItem(product)"><i class="fas fa-trash-alt"></i></button></td>
+                        <td><button class="remove-item" data-ng-click="removeItem(product)"><i
+                                    class="fas fa-trash-alt"></i></button></td>
                     </tr>
                 </table>
 
@@ -112,7 +113,28 @@
                 <a href="#">Contact</a>
             </div>
 
-            <button class="login-btn" data-ng-click="login">LOGIN</button>
+            <!-- Bootstrap Modal Form -->
+            <button class="login-btn" data-toggle="modal" data-target="#exampleModalCenter">LOGIN</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                        </div>
+                        <div class="modal-body">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </header>
@@ -130,7 +152,7 @@
             </div>
         </div>
     </div>
-
+    
     <main class="container" data-ng-controller="cardController">
 
         <div class="slogan-section">
@@ -217,7 +239,7 @@
             </div>
         </div>
 
-    </main >
+    </main>
 
     <footer>
         <div class="container">

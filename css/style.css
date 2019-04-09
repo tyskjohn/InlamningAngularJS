@@ -89,7 +89,9 @@
 
 .shopping-cart {
     grid-column: 6;
+    font-size: 24px;
 }
+
 
 .cart-thumbnail {
     height: 50px;
@@ -218,6 +220,18 @@ header {
     padding: 17px 25px;
     border-radius: 30px;
     cursor: pointer;
+}
+
+/* MODAL FORM */
+
+.modal {
+    font-family: 'Rubik', sans-serif;
+}
+
+.modal-header, .modal-header h5 {
+    background: #ff8155;
+    color: #fff;
+    
 }
 
 /* Product Store section */
