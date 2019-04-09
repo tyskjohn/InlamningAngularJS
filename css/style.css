@@ -76,7 +76,6 @@
 
 .user-header button {
     border: none;
-    background: none;
 }
 
 .mina-sidor {
@@ -101,6 +100,13 @@
     position: absolute; 
     top: 0px; 
     left: 30px;
+}
+
+.dropdown-menu button {
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 10px 0 ;
 }
 
 .cart-thumbnail {
@@ -187,7 +193,7 @@ header {
 }
 
 .btn-phone:hover, .login-btn:hover {
-    background: #ffd9cb;
+    background: #ff5f25;
     color: #0e1b33;
     transition: .2s;
 }
@@ -557,8 +563,6 @@ header {
     color: #fff; 
 }
 
-
-
 /* main list-Card section */
 
 .list-card-section {
@@ -598,8 +602,6 @@ header {
 .list-card-description  {
     grid-column: 2;
     grid-row: 11;
-
-    max-width: 400px;
 }
 
 .list-card-price {
