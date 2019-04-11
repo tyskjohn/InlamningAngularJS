@@ -34,6 +34,8 @@ app.controller("cardController", function ($scope, $http) {
         return starProcentageRounded;
     }
 
+  
+
     // // ShoppingCart
 
     // let getItemId = function(itemList, id) {
