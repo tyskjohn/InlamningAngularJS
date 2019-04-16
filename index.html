@@ -17,12 +17,22 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-cookies.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-animate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/routes.js"></script>
     <script src="js/shoppingCartController.js"></script>
+
+    <script src="/services/authService.js"></script>
+    <script src="/services/dialogService.js"></script>
+    <script src="/services/userService.js"></script>
+
+    <script src="/views/login/loginController.js"></script>
+    <script src="/views/register/registerController.js"></script>
+    <script src="/views/userPage/userPageController.js"></script>
 
 
 </head>
@@ -54,7 +64,7 @@
         <div class="container-header top-header-grid">
 
             <div class="greetings">
-                <p>Hej Användare!</p>
+                <p>Hej {{ vm.user.firstname }}!</p>
             </div>
 
             <button class="mina-sidor" data-ng-click="mina-sidor">Mina Sidor</button>
@@ -123,22 +133,7 @@
 
             <!-- Modal -->
             <div data-ng-include="modalForm">
-                <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
-                            </div>
-                            <div class="modal-body">
 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
 
         </div>

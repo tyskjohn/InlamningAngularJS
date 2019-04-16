@@ -2,13 +2,12 @@ app.controller("shoppingCartController", function ($scope) {
 
     // popup Form modalFOrm - login/ registerForm
     $scope.modalForm = "../views/modalForm.html";
-    $scope.loginForm = "../views/loginForm.html";
-    $scope.registerForm = "../views/registerForm.html";
+    $scope.loginForm = "../views/login/loginForm.html";
+    $scope.registerForm = "../views/register/registerForm.html";
 
     $scope.changeView = function(view) {
         $scope.loginForm = "../views/" + view;
     };
-
 
     // ShoppingCart
 
