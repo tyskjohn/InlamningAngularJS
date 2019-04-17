@@ -60,14 +60,12 @@
         </div>
     </div>
 
-    <div class="top-header user-header">
+    <div class="top-header user-header sticky-top" >
         <div class="container-header top-header-grid">
 
             <div class="greetings">
                 <p>Hej {{ vm.user.firstname }}!</p>
             </div>
-
-            <button class="mina-sidor" data-ng-click="mina-sidor">Mina Sidor</button>
 
             <!-- Shopping Cart -->
             <button class="mr-3 shopping-cart" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -93,8 +91,7 @@
 
                 <h5 class="dropdown-item mb-4">Totalt: {{ getTotalPrice() }} SEK</h5>
 
-                <button type="button" class="login-btn btn-block mb-3" data-toggle="modal"
-                    data-target="#exampleModalCenter">Login/ Register</button>
+                <a href="#!login" type="button" class="login-btn btn-block mb-3" >Login/ Register</a>
                 <button type="button" class="btn-checkout btn-success btn-block mb-2">Checkout</button>
             </div>
 
@@ -129,12 +126,7 @@
             </div>
 
             <!-- Bootstrap Modal Form -->
-            <button class="login-btn" data-toggle="modal" data-target="#exampleModalCenter">LOGIN</button>
-
-            <!-- Modal -->
-            <div data-ng-include="modalForm">
-
-            </div>
+            <a class="login-btn" href="#!login">LOGIN</a>
 
         </div>
 
@@ -185,7 +177,7 @@
         <div class="main-nav">
             <div class="grid-or-list">
 
-                <a href="#/!">
+                <a href="#!showgrid">
                     <div class="grid-circle">
                         <span><i class="fas fa-th"></i></span>
                     </div>
@@ -215,6 +207,10 @@
         </div>
 
         <!-- AngularJS View -->
+        <div    ng-class="{ 'alert': dialog, 'alert-success': dialog.type === 'success', 'alert-danger': dialog.type === 'error' }" 
+                ng-if="dialog" 
+                ng-bind="dialog.message">
+        </div>
         <div data-ng-view>
 
         </div>
