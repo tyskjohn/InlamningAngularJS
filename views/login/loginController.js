@@ -12,15 +12,19 @@
         function login() {
             vm.dataLoading = true;
 
-            authService.Login(vm.username, vm.password, function(res) {
-                if(res.success) {                   
-                    authService.SetCredentials(vm.username, vm.password);
-                    $location.path("/mypages");
-                } else {
-                    dialogService.Error(res.message);
-                    vm.dataLoading = false;
-                }
-            });
+            authService.Login(vm.email, vm.password)
+                .then(function (res) {
+
+                    if(res.success) {
+                        authService.SetCredentials(res.id, res.token);
+                        $location.path("/userpage");
+                    }
+                    else {
+
+                        dialogService.Error(res.message);
+                        vm.dataLoading = false;
+                    }
+                })
         }
 
         (function initController() {

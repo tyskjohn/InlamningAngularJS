@@ -1,9 +1,9 @@
 app.controller("cardController", function ($scope, $http) {
 
     // hämtar json-listan från API
-    $http.get("http://localhost:5000/api/itemList")
+    $http.get("http://localhost:3001/api/items")
     .then(function(res) {
-        $scope.itemList = res.data;
+        $scope.itemList = res.data; 
     });
 
     $scope.showProducts = "6";

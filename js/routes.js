@@ -24,7 +24,7 @@ app.config(function($routeProvider, $locationProvider) {
         controllerAs: "vm"                
     })
 
-    .when("/mypages", {
+    .when("/userpage", {
         controller: "userPageController",
         templateUrl: "../views/userPage/userPage.html",
         controllerAs: "vm"

@@ -16,7 +16,7 @@
         <tbody>
             <tr data-ng-repeat="user in vm.allUsers">
                 <td>{{ user.id }}</td>
-                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
                 <td>{{ user.firstname }} {{ user.lastname }}</td>
                 <td><a class="btn btn-sm btn-danger text-white" data-ng-click="vm.deleteUser(user.id)">Delete</a></td>
             </tr>

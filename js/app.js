@@ -3,27 +3,6 @@ let app = angular.module("cardApp", ["ngRoute", "ngCookies"]);
 app.config(config);
 app.run(run);
 
-// config.$inject = ["$routeProvider", "$locationProvider"];
-//     function config($routeProvider, $locationProvider) {
-//         $routeProvider
-//             .when("/mypages", {
-//                 controller: "userPageController",
-//                 templateUrl: "../views/userPage/userPage.html",
-//                 controllerAs: "vm"
-//             })
-//             .when("/login", {
-//                 controller: "loginController",
-//                 templateUrl: "../views/login/loginForm.html",
-//                 controllerAs: "vm"                
-//             })
-//             .when("/register", {
-//                 controller: "registerController",
-//                 templateUrl: "../views/register/registerForm.html",
-//                 controllerAs: "vm"                
-//             })
-//             .otherwise({ redirectTo: "/login" });            
-//     }
-
 run.$inject = ["$rootScope", "$location", "$cookies", "$http"];
 function run($rootScope, $location, $cookies, $http) {
 

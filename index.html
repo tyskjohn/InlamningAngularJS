@@ -26,9 +26,9 @@
     <script src="js/routes.js"></script>
     <script src="js/shoppingCartController.js"></script>
 
-    <script src="/services/authService.js"></script>
+    <script src="/services/new.authService.js"></script>
     <script src="/services/dialogService.js"></script>
-    <script src="/services/userService.js"></script>
+    <script src="/services/new.userService.js"></script>
 
     <script src="/views/login/loginController.js"></script>
     <script src="/views/register/registerController.js"></script>
@@ -64,7 +64,7 @@
         <div class="container-header top-header-grid">
 
             <div class="greetings">
-                <p>Hej {{ vm.user.firstname }}!</p>
+                <p>Välkommen {{ vm.user.firstname }}!</p>
             </div>
 
             <!-- Shopping Cart -->
@@ -91,8 +91,8 @@
 
                 <h5 class="dropdown-item mb-4">Totalt: {{ getTotalPrice() }} SEK</h5>
 
-                <a href="#!login" type="button" class="login-btn btn-block mb-3" >Login/ Register</a>
-                <button type="button" class="btn-checkout btn-success btn-block mb-2">Checkout</button>
+                <a href="#!login" class="login-btn btn btn-block mb-3" >Login/ Register</a>
+                <a class="checkout-btn btn btn-block mb-2">Checkout</a>
             </div>
 
         </div>
@@ -125,8 +125,7 @@
                 <a href="#">Contact</a>
             </div>
 
-            <!-- Bootstrap Modal Form -->
-            <a class="login-btn" href="#!login">LOGIN</a>
+            <button class="login-btn btn">Get A Quote</button>
 
         </div>
 
@@ -178,15 +177,17 @@
             <div class="grid-or-list">
 
                 <a href="#!showgrid">
-                    <div class="grid-circle">
+                    <div class="grid-circle mr-2">
                         <span><i class="fas fa-th"></i></span>
                     </div>
                 </a>
                 <a href="#!showlist">
-                    <div class="list-circle">
+                    <div class="list-circle mr-2">
                         <span><i class="fas fa-bars"></i></span>
                     </div>
                 </a>
+
+                <a class="login-btn btn" href="#!login">Login/ Register</a>
 
             </div>
 

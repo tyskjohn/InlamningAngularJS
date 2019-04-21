@@ -91,6 +91,7 @@
     grid-column: 6;
     font-size: 26px;
     margin-top: 8px;
+    background: #eeeeee;
 }
 
 .badge {
@@ -173,7 +174,7 @@ header {
 .btn {
     background: #fff;
     font-size: 14px;
-    padding: 7px 15px;
+    padding: 15px 15px;
     font-weight: 500;
     color: #999ea5;
     border: 1px solid #999ea5;
@@ -233,20 +234,25 @@ header {
     font-size: 16px;
     font-weight: 500;
     color: #fff;
-    padding: 17px 25px;
+    padding: 15px 25px;
     border-radius: 30px;
     cursor: pointer;
 }
 
-/* MODAL FORM */
-
-.modal {
+.checkout-btn {
     font-family: 'Rubik', sans-serif;
+    border: none;
+    background: #15ee90 ;
+    font-size: 16px;
+    font-weight: 500;
+    color: white !important;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
-.modal-header, .modal-header h5 {
-    background: #ff8155;
-    color: #fff;
+.checkout-btn:hover {
+    background: green;
     
 }
 
@@ -651,7 +657,7 @@ header {
 
     margin: 0;
     padding: 0;
-    height: 40px;
+    height: 30px;
     border: none;
     border-radius: 5px;
     font-family: 'rubik', sans-serif;
